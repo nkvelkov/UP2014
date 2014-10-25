@@ -12,17 +12,17 @@ int main ()
 
     resultNumber1 = hundredsA * 100 + tensA * 10 + unitsB;
     resultNumber2 = hundredsB * 100 + tensB * 10 + unitsA;
-    // за подточка а
+    // za podtochka а
     cout << resultNumber1 << " " << resultNumber2 << endl;
 
     resultNumber1 = hundredsA * 100 + tensB * 10 + unitsA;
     resultNumber2 = hundredsB * 100 + tensA * 10 + unitsB;
-    // за подточка б
+    // za podtochka b
     cout << resultNumber1 << " " << resultNumber2 << endl;
 
     resultNumber1 = hundredsB * 100 + tensA * 10 + unitsA;
     resultNumber2 = hundredsA * 100 + tensB * 10 + unitsB;
-    // за подточка в
+    // za podtochka v
     cout << resultNumber1 << " " << resultNumber2 << endl;
     return 0;
 }
