@@ -8,7 +8,8 @@ int main()
 
     while( n != 0 )
     {
-        if( n % 2 == 0 )
+        int p = n % 10;
+        if( p % 2 == 0 )
             ++counter;
 
         n /= 10;
