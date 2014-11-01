@@ -9,7 +9,7 @@ int main()
     {
         cin >> n;
 
-    }while( n < 0 );
+    }while( n <= 0 );
 
     for(int i = 1; i <= n; ++i)
     {
