@@ -12,14 +12,14 @@ int main()
 
 	for (int i = 2; i <= n; ++i)
 	{
-	    if( i % 3 == 0)
-        {
-            a = -2;
-        }else
-        {
-            a = 1;
-        }
-		sum += (double)a/i;
+	     if( i % 3 == 0)
+         {
+             a = -2;
+         }else
+         {
+             a = 1;
+         }
+		 sum += (double)a/i;
 	}
 
 	cout << sum << endl;

@@ -9,13 +9,13 @@ int main()
 
 	cin >> n >> k;
 
-	int pn = 1;
+	int product = 1;
 
 	for (int i = k+1; i <= n; ++i)
 	{
-		pn *= i;
+		product *= i;
 	}
-	cout << pn << endl;
+	cout << product << endl;
 
 	return 0;
 }
