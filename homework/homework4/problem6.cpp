@@ -16,11 +16,11 @@ int main()
 
     for(int i=0; i<=n; ++i)
     {
-        sum += sign * numerator / denominator; // на първата итерация имаме x/1
-        sign = -sign;                          //на следващата знакът се мени
-        numerator *= increment;                //х става х на трета степен
-        denominator *= ++denominator * ++denominator;//в знаменателя трябва да получим 3! = 2 * 3
-    }                                               // това работи и за 5! = 3! * 4 * 5
+        sum += sign * numerator / denominator; // in the first iteration sum is equal to x/1
+        sign = -sign;                          //in the next one the sign changes and
+        numerator *= increment;                //x becomes x on third power
+        denominator *= ++denominator * ++denominator;//for the denominator we have 3! = 2 * 3
+    }                                               // this works for every factorial number, for example 5! = 3! * 4 * 5
 
     cout << sum << endl;
 
