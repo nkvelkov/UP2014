@@ -4,29 +4,26 @@ using namespace std;
 
 int main()
 {
-    int n;
+    int n, swapNumber;
     cin >> n;
 
     int number1, number2;
     cin >> number1;
 
-    bool flag = false;
-
-    for(int i = 0; i < n-1; ++i)
+    for(int i = 0; i < n - 1; ++i)
     {
         cin >> number2;
 
-        if(number1 == number2)
+        while(number2 != 0)
         {
-            flag = true;
+            swapNumber = number2;
+            number2 = number1 % number2;
+            number1 = swapNumber;
         }
-
-        number1 = number2;
     }
 
-    if(flag)
-        cout << "Yes" << endl;
-    else
-        cout << "No" << endl;
+    cout << number1 << endl;
+
     return 0;
 }
+
