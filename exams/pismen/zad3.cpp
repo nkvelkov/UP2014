@@ -4,7 +4,7 @@ using namespace std;
 
 bool isReadable(char maze[][100], int n, int m, const char* word, char* buffer, int buff_index, int cur_i, int cur_j)
 {
-    buffer[buff_index] = '\0'; //dobavqme '\0' za da mojem da izpolzvame strcmp
+    buffer[buff_index] = '\0'; //добавяме '\0', за да можем да ползваме strcmp
     if(!strcmp(buffer, word))
     {
         return true;
@@ -23,15 +23,15 @@ bool isReadable(char maze[][100], int n, int m, const char* word, char* buffer, 
     }
 
     buffer[buff_index] = maze[cur_i][cur_j];
-    maze[cur_i][cur_j] = '\0'; // obtelqzvame tekushtata poziciq za markirana !
+    maze[cur_i][cur_j] = '\0'; //отбелязваме текущата позиция за маркирана!
 
     bool up = isReadable(maze, n, m, word, buffer, buff_index+1, cur_i-1, cur_j);
     bool down = isReadable(maze, n, m, word, buffer, buff_index+1, cur_i+1, cur_j);
     bool left = isReadable(maze, n, m, word, buffer, buff_index+1, cur_i, cur_j-1);
     bool right = isReadable(maze, n, m, word, buffer, buff_index+1, cur_i, cur_j+1);
 
-    maze[cur_i][cur_j] = buffer[buff_index]; // mahame markirovkata na tekushtata poziciq
-                                            // pri vryshtane ot rekursiqta.
+    maze[cur_i][cur_j] = buffer[buff_index]; // махаме маркировката от текущата позиция
+                                            // при връщане от рекурсията.
     return up || down || right || left;
 }
 
